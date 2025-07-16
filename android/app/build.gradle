@@ -1,6 +1,8 @@
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
+apply plugin: 'com.google.gms.google-services'
+
 
 /**
  * This is the configuration block to customize your React Native Android app.
@@ -79,11 +81,16 @@ android {
 
     namespace "com.ridesharing"
     defaultConfig {
+
+    //      ndk {
+    //     abiFilters "armeabi-v7a", "arm64-v8a" // ✅ Exclude x86
+    // }
         applicationId "com.ridesharing"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        
     }
     signingConfigs {
         debug {
@@ -116,4 +123,17 @@ dependencies {
     } else {
         implementation jscFlavor
     }
+
+      implementation(project(':react-native-maps')){
+      exclude group: 'com.google.android.gms'
+  }
+  implementation 'com.google.android.gms:play-services-base:18.0.1'
+  implementation 'com.google.android.gms:play-services-location:19.0.1'
+  implementation 'com.google.android.gms:play-services-maps:18.0.2'
+
+// firebase dependencies
+implementation platform('com.google.firebase:firebase-bom:33.16.0')
+
+
+
 }

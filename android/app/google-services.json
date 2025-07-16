@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "928143569301",
+    "project_id": "meta-hub-10527",
+    "storage_bucket": "meta-hub-10527.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:928143569301:android:29de478f5ae1a4394f069c",
+        "android_client_info": {
+          "package_name": "com.ridesharing"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2eKqEG0Ot-LhuKLgiMQb4hWbTYjGqTP0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
