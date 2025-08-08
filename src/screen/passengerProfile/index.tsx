@@ -92,7 +92,7 @@ export default function passengerProfile(props:any) {
           >
             {label}
           </Text>
-          <TextInput placeholder="" />
+          <TextInput placeholder=""  style={{width:"84%"}}/>
           <View
             style={{
               width: wp(80),

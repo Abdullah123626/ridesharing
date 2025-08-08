@@ -5,7 +5,7 @@ import { hp, wp } from '../../enums/styleGuide';
 export default function SplashScreen({ navigation }: any) {
   useEffect(() => {
     setTimeout(() => {
-      navigation.replace('rideDetails'); // works now
+      navigation.replace('Notification'); // works now
     }, 2000);
   }, []);
 

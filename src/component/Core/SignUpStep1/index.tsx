@@ -35,26 +35,47 @@ export default function SignUpStep1({ onContinue }) {
         >
           Driver Details
         </Text>
+<View style={{ marginTop: wp(2) }}>
+  {[
+    {
+      placeholder: 'Full Name',
+      icon: require('../../../assets/icons/contact.png'),
+    },
+    {
+      placeholder: 'Email Id',
+      icon: require('../../../assets/icons/mail.png'),
+    },
+    {
+      placeholder: 'Password',
+      icon: require('../../../assets/icons/eye.png'),
+    },
+    {
+      placeholder: 'Confirm Password',
+      icon: require('../../../assets/icons/eye.png'),
+    },
+    {
+      placeholder: 'Mobile Number',
+      icon: require('../../../assets/icons/phone.png'),
+    },
+    {
+      placeholder: 'Date of birth',
+      icon: require('../../../assets/icons/calender.png'),
+    },
+    {
+      placeholder: 'Estate & City',
+      icon: require('../../../assets/icons/location.png'),
+    },
+  ].map((item, index) => (
+    <Textinputt
+      key={index}
+      imageSource={item.icon}
+      imageStyle={{ width: 38, height: 38 }}
+      placeholderText={item.placeholder}
+      textInputStyle={{ fontSize: wp(4), color: '#412160' }}
+    />
+  ))}
+</View>
 
-        <View style={{ marginTop: wp(2) }}>
-          {[
-            'Full Name',
-            'Email Id',
-            'Password',
-            'Confirm Password',
-            'Mobile Number',
-            'Date of birth',
-            'Estate & City',
-          ].map((placeholder, index) => (
-            <Textinputt
-              key={index}
-              imageSource={require('../../../assets/icons/contact.png')}
-              imageStyle={{ width: 38, height: 38 }}
-              placeholderText={placeholder}
-              textInputStyle={{ fontSize: wp(4), color: '#412160' }}
-            />
-          ))}
-        </View>
 
         <TouchableOpacity
           onPress={onContinue}

@@ -24,7 +24,21 @@ import reviewScreen from '../../screen/reviewScreen';
 import homeScreen from '../../screen/homeScreen';
 import startRide from '../../screen/startRide';
 import rideDetails from '../../screen/rideDetails';
-// Import your screens here
+import appName from '../../screen/appName';
+import enterDetails from '../../screen/enterDetails';
+import carDetails from '../../screen/carDetails';
+import kycScreen from '../../screen/kycScreen';
+import contactSupport2 from '../../screen/contactSupport2';
+import settingScreen from '../../screen/settingScreen';
+import History from '../../screen/History';
+import billingDetails from '../../screen/billingDetails';
+import paymentHistory from '../../screen/paymentHistory';
+import Settings from '../../screen/Settings';
+import Map from '../../screen/Map';
+import Review from '../../screen/Review';
+import driverList from '../../screen/driverList';
+import Notification from '../../screen/Notification';
+//Import your screens here 
 
 
 const Stack = createNativeStackNavigator();
@@ -40,7 +54,7 @@ export default function MainStack() {
         <Stack.Screen name="signUp" component={signUp} />
         <Stack.Screen name="passengerSignUp" component={passengerSignUp} />
         <Stack.Screen name="driverSignUp" component={driverSignUp} />
-        {/* Main app navigation now uses DrawerNavigator */}
+         
         <Stack.Screen name="MainApp" component={DrawerNavigator} />
         <Stack.Screen name="passengerProfile" component={passengerProfile} />
         <Stack.Screen name="notificationScreen" component={notificationScreen} />
@@ -54,6 +68,20 @@ export default function MainStack() {
         <Stack.Screen name="homeScreen" component={homeScreen} />
         <Stack.Screen name="startRide" component={startRide} />
         <Stack.Screen name="rideDetails" component={rideDetails} />
+        <Stack.Screen name="appName" component={appName} />
+        <Stack.Screen name="enterDetails" component={enterDetails} />
+        <Stack.Screen name="carDetails" component={carDetails} />
+        <Stack.Screen name="kycScreen" component={kycScreen} />
+        <Stack.Screen name="contactSupport2" component={contactSupport2} />
+        <Stack.Screen name="settingScreen" component={settingScreen} />
+        <Stack.Screen name="History" component={History} />
+        <Stack.Screen name="billingDetails" component={billingDetails} />
+        <Stack.Screen name="paymentHistory" component={paymentHistory} />
+        <Stack.Screen name="Settings" component={Settings} />
+        <Stack.Screen name="Map" component={Map} />
+        <Stack.Screen name="Review" component={Review} />
+        <Stack.Screen name="driverList" component={driverList} />
+        <Stack.Screen name="Notification" component={Notification} />
 
       </Stack.Navigator>
     </NavigationContainer>

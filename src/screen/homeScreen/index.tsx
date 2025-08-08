@@ -14,10 +14,12 @@ export default function homeScreen(props:any) {
           marginTop: wp(2),
         }}
       >
+        <TouchableOpacity>
         <Image
           source={require('../../assets/icons/slash.png')}
           style={{ width: 50, height: 50 }}
         />
+        </TouchableOpacity>
         <Text
           style={{
             fontSize: wp(5.5),

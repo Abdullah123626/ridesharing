@@ -1,12 +1,16 @@
-import { View, Text, Image, TouchableOpacity } from 'react-native';
-import React from 'react';
+import { View, Text, Image, TouchableOpacity, ScrollView } from 'react-native';
+import React, { useState } from 'react';
 import { hp, wp } from '../../enums/styleGuide';
-import ActiveRides from '../../component/Core/ActiveRdes';
 import SchduleRide from '../../component/Core/SchduleRide';
+import Flexibile from '../../component/Core/Flexible';
+
 export default function rideDetails(props: any) {
   const { navigation } = props;
+  const [selectedRideType, setSelectedRideType] = useState<'flexible' | 'schedule' | null>(null);
+
   return (
     <View style={{ flex: 1, backgroundColor: '#412160' }}>
+      {/* Header */}
       <View
         style={{
           width: '90%',
@@ -35,75 +39,91 @@ export default function rideDetails(props: any) {
         <View style={{ marginRight: wp(7) }}></View>
       </View>
 
+      {/* Body */}
       <View
         style={{
-          width: '100%',
-          height: '100%',
+          flex: 1,
           backgroundColor: '#FFFFFF',
           marginTop: wp(4),
+          borderTopLeftRadius: wp(5),
+          borderTopRightRadius: wp(5),
         }}
       >
-        <View
-          style={{
-            flexDirection: 'row',
-            width: '60%',
-            marginLeft: wp(8),
-            marginTop: wp(8),
-          }}
-        >
-          <TouchableOpacity
+        <ScrollView showsVerticalScrollIndicator={false}>
+
+          {/* FLEXIBLE OPTION */}
+          <View
             style={{
-              width: 17,
-              height: 17,
-              borderRadius: 30,
-              borderWidth: 2,
-              marginTop: wp(1),
-              borderColor: '#555555',
-            }}
-          ></TouchableOpacity>
-          <Text
-            style={{
-              fontSize: wp(4.5),
-              fontWeight: '500',
-              marginLeft: wp(10),
-              color: '#412160',
+              flexDirection: 'row',
+              width: '60%',
+              marginLeft: wp(8),
+              marginTop: wp(8),
+              alignItems: 'center',
             }}
           >
-            Flexible
-          </Text>
-        </View>
+            <TouchableOpacity
+              onPress={() => setSelectedRideType('flexible')}
+              style={{
+                width: 17,
+                height: 17,
+                borderRadius: 30,
+                borderWidth: 2,
+                borderColor: selectedRideType === 'flexible' ? '#412160' : '#555555',
+                backgroundColor: selectedRideType === 'flexible' ? '#412160' : 'transparent',
+              }}
+            />
+            <Text
+              style={{
+                fontSize: wp(4.5),
+                fontWeight: '500',
+                marginLeft: wp(10),
+                color: '#412160',
+              }}
+            >
+              Flexible
+            </Text>
+          </View>
 
-        <View
-          style={{
-            flexDirection: 'row',
-            width: '60%',
-            marginLeft: wp(8),
-            marginTop: wp(8),
-          }}
-        >
-          <TouchableOpacity
+          {/* SCHEDULE RIDE OPTION */}
+          <View
             style={{
-              width: 17,
-              height: 17,
-              borderRadius: 30,
-              borderWidth: 2,
-              marginTop: wp(1),
-              borderColor: '#555555',
-            }}
-          ></TouchableOpacity>
-          <Text
-            style={{
-              fontSize: wp(5),
-              fontWeight: '500',
-              marginLeft: wp(10),
-              color: '#412160',
+              flexDirection: 'row',
+              width: '60%',
+              marginLeft: wp(8),
+              marginTop: wp(4),
+              alignItems: 'center',
             }}
           >
-            Schedule Ride
-          </Text>
-        </View>
+            <TouchableOpacity
+              onPress={() => setSelectedRideType('schedule')}
+              style={{
+                width: 17,
+                height: 17,
+                borderRadius: 30,
+                borderWidth: 2,
+                borderColor: selectedRideType === 'schedule' ? '#412160' : '#555555',
+                backgroundColor: selectedRideType === 'schedule' ? '#412160' : 'transparent',
+              }}
+            />
+            <Text
+              style={{
+                fontSize: wp(5),
+                fontWeight: '500',
+                marginLeft: wp(10),
+                color: '#412160',
+              }}
+            >
+              Schedule Ride
+            </Text>
+          </View>
 
-        <SchduleRide />
+          {/* COMPONENT DISPLAY AREA */}
+          <View style={{ marginTop: wp(8), paddingHorizontal: wp(5), marginBottom: wp(10) }}>
+            {selectedRideType === 'flexible' && <Flexibile />}
+            {selectedRideType === 'schedule' && <SchduleRide />}
+          </View>
+
+        </ScrollView>
       </View>
     </View>
   );

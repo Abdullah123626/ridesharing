@@ -17,7 +17,7 @@ export default function SchduleRide() {
         <View
           style={{
             width: '20%',
-            height: '30%',
+            height: '80%',
             justifyContent: 'center',
             borderWidth: 0.4,
             borderRadius: 8,
@@ -38,7 +38,7 @@ export default function SchduleRide() {
         <View
           style={{
             width: '30%',
-            height: '40%',
+            height: '80%',
             justifyContent: 'center',
             borderWidth: 0.4,
             borderRadius: 8,
@@ -63,14 +63,14 @@ export default function SchduleRide() {
           justifyContent: 'space-between',
           width: '90%',
           alignSelf: 'center',
-          marginTop: hp(0),
-          height: '12%',
+          marginTop: hp(1),
+          height: '7%',
         }}
       >
         <View
           style={{
             width: '20%',
-            height: '40%',
+            height: '80%',
             justifyContent: 'center',
             borderWidth: 0.4,
             borderRadius: 8,
@@ -91,7 +91,7 @@ export default function SchduleRide() {
         <View
           style={{
             width: '30%',
-            height: '40%',
+            height: '80%',
             justifyContent: 'center',
             borderWidth: 0.4,
             borderRadius: 8,
@@ -117,12 +117,13 @@ export default function SchduleRide() {
           width: '90%',
           alignSelf: 'center',
           height: '12%',
+          marginTop:wp(2)
         }}
       >
         <View
           style={{
             width: '20%',
-            height: '40%',
+            height: '60%',
             justifyContent: 'center',
             borderWidth: 0.4,
             borderRadius: 8,
@@ -143,7 +144,7 @@ export default function SchduleRide() {
         <View
           style={{
             width: '20%',
-            height: '40%',
+            height: '50%',
             justifyContent: 'center',
             borderWidth: 0.4,
             borderRadius: 8,
@@ -164,13 +165,13 @@ export default function SchduleRide() {
 
       <TouchableOpacity
         style={{
-          width: '80%',
-          height: '8%',
+          width: '85%',
+          height: '9%',
           backgroundColor: '#412160',
           alignSelf: 'center',
           justifyContent: 'center',
-          borderRadius: 8,
-          marginTop: hp(30),
+          borderRadius: 3,
+          marginTop: hp(37),
         }}
       >
         <Text

@@ -33,7 +33,7 @@ export default function mapScreen() {
       >
         <Image
           source={require('../../assets/icons/slash.png')}
-          style={{ width: 60, height: 60, }}
+          style={{ width: 40, height:40, }}
         />
       </TouchableOpacity>
 

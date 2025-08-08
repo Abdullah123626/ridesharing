@@ -34,6 +34,12 @@ export default function signinScreen(props:any  ) {
           marginTop: wp(5),
         }}
       >
+
+
+
+
+
+
         <Text
           style={{
             fontSize: wp(8),
